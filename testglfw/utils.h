@@ -10,14 +10,14 @@ using namespace std;
 
 class Utils {
 public:
-	// random value from 0.0 to 1.0
-	static double random() {
-		return (double)rand()/(double)RAND_MAX;
-	}
+    // random value from 0.0 to 1.0
+    static double random() {
+        return (double) rand() / (double) RAND_MAX;
+    }
 
-	static double drob(double big) {
-		return big - (int) big;
-	}
+    static double drob(double big) {
+        return big - (int) big;
+    }
 };
 
 #endif /* UTILS_H_ */

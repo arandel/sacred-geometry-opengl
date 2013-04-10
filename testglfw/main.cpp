@@ -4,24 +4,24 @@
 using namespace std;
 
 int main(void) {
-	srand(time(0));
+    srand(time(0));
 
-	cout << "Creating OpenGL launcher...\n";
+    cout << "Creating OpenGL launcher...\n";
 
-	Launcher * launcher = new Launcher();
+    Launcher * launcher = new Launcher();
 
-	cout << "Done, initializing...\n";
+    cout << "Done, initializing...\n";
 
-	if (!launcher->init())
-		return -1;
+    if (!launcher->init())
+        return -1;
 
-	cout << "Done, launching window...\n";
+    cout << "Done, launching window...\n";
 
-	launcher->showWindowWhileNotClosed();
+    launcher->showWindowWhileNotClosed();
 
-	cout << "Clean up and good bye!\n";
+    cout << "Clean up and good bye!\n";
 
-	delete launcher;
+    delete launcher;
 
-	return 0;
+    return 0;
 }

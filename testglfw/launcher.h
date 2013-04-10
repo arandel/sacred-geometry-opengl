@@ -3,17 +3,15 @@
 #ifndef LAUNCHER_H_
 #define LAUNCHER_H_
 
-
 class Launcher {
-	Renderer * renderer;
+    Renderer * renderer;
 public:
-	Launcher() {
-		renderer = new Renderer();
-	}
-	~Launcher();
-	bool init();
-	void showWindowWhileNotClosed();
+    Launcher() {
+        renderer = new Renderer();
+    }
+    ~Launcher();
+    bool init();
+    void showWindowWhileNotClosed();
 };
-
 
 #endif /* LAUNCHER_H_ */
