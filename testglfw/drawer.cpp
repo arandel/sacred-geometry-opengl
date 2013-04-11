@@ -35,6 +35,7 @@ void Drawer::drawStarTetrahedron() {
     glVertex3f(-r, -r, -r);
     glEnd();
 
+    // TODO: all three
     // Edges
     glColor3fv(YELLOW);
     glBegin(GL_LINE_LOOP);
