@@ -10,12 +10,13 @@ class Drawer {
 
     static const float RADIUS = 1.5;
 
-    static const GLfloat BLUE[4], RED[4], YELLOW[4], GREY[4], LIGHT_GREY[4];
+    static const GLfloat PURPLE[4], YELLOW[4], GREY[4], GREEN[4];
 
     GLUquadricObj * quadObj;
-    Particle* particles[PARTICLE_NUM];
+    Particle * particles[PARTICLE_NUM];
 
-    void drawSquare(float rad);
+    void drawSquare(GLfloat*, float);
+    GLfloat * transformColor(const GLfloat*, float);
 
 public:
     Drawer() {
@@ -30,10 +31,10 @@ public:
         delete[] particles;
     }
 
-    void drawMetatronCube();
-    void drawStarTetrahedron();
-    void drawHexahedron();
-    void drawOctahedron();
+    void drawMetatronCube(float);
+    void drawStarTetrahedron(float);
+    void drawHexahedron(float);
+    void drawOctahedron(float);
 
     void drawParticles(float);
 };

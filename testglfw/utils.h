@@ -5,6 +5,7 @@
 #define UTILS_H_
 
 #define PI 3.141592653589793238462
+#define E 2.718281828459045
 
 using namespace std;
 

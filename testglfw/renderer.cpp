@@ -24,10 +24,10 @@ void Renderer::render(float time) {
     glRotatef(time * 7, 0.0, 1.0, 0.0);
     glRotatef(time * 4, 0.0, 0.0, 1.0);
 
-    drawer->drawMetatronCube();
-    drawer->drawStarTetrahedron();
-    drawer->drawHexahedron();
-    drawer->drawOctahedron();
+    drawer->drawMetatronCube(time);
+    drawer->drawStarTetrahedron(time);
+    drawer->drawHexahedron(time);
+    drawer->drawOctahedron(time);
 
     drawer->drawParticles(time);
 
