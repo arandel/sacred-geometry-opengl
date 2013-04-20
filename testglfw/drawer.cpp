@@ -3,11 +3,12 @@
 
 const GLfloat Drawer::PURPLE[4] = { 118.0 / 0xFF, 8.0 / 0xFF, 170.0 / 0xFF, 0.8 }; //#7608AA
 const GLfloat Drawer::YELLOW[4] = { 256.0 / 0xFF, 214.0 / 0xFF, 0.0, 0.3 }; //#FFD600
-const GLfloat Drawer::GREY[4] = { 0.1, 0.1, 0.1, 0.2 };
+const GLfloat Drawer::GREY[4] = { 0.3, 0.3, 0.3, 0.3 };
 const GLfloat Drawer::GREEN[4] = { 152.0 / 0xFF, 237.0 / 0xFF, 0.0, 0.1 }; //#98ED00
 
 void Drawer::drawMetatronCube(float t) {
-    glColor4fv(GREY);
+    GLfloat * color = transformColor(GREY, t / 2);
+    glColor4fv(color);
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
             for (int k = 0; k < 3; ++k) {
