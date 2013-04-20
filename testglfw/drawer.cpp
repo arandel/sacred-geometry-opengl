@@ -217,9 +217,9 @@ GLfloat * Drawer::transformColor(const GLfloat * color, float t) {
 
     float m = 0.5 + sin(t) / PI;
     for (int i = 0; i < 3; ++i) {
-        result[i] = color[i] * m;
+        result[i] = 1 - color[i] * m;
     }
-    result[3] = color[3];
+    result[3] = color[3] * sin(t);
 
     return result;
 }
