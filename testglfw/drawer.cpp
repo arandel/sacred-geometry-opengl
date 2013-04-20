@@ -215,11 +215,11 @@ void Drawer::drawParticles(float time) {
 GLfloat * Drawer::transformColor(const GLfloat * color, float t) {
     GLfloat * result = new GLfloat[4];
 
-    float m = 0.5 + sin(t) / PI;
     for (int i = 0; i < 3; ++i) {
-        result[i] = 1 - color[i] * m;
+        result[i] = color[i];
     }
-    result[3] = color[3] * sin(t);
+    float m = 0.5 + sin(t) / 2;
+    result[3] = color[3] * m;
 
     return result;
 }
