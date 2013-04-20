@@ -36,7 +36,6 @@ void Drawer::drawStarTetrahedron(float t) {
     glEnd();
 
     glColor3fv(color);
-    glColor3fv(YELLOW);
     glBegin(GL_LINE_LOOP);
     glVertex3f(r, 0, 0);
     glVertex3f(0, r, 0);
